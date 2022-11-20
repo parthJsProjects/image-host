@@ -1,0 +1,14 @@
+.hidden {
+  display: none !important;
+}
+
+.no-pop {
+  box-shadow: none !important;
+  width: 50vw !important;
+  max-width: 250px !important;
+}
+
+.exit {
+  left: 100% !important;
+  transition: left 300ms ease-out 800ms !important;
+}

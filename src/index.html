@@ -4,9 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
-	<link rel="stylesheet" href="styles/main.css" />
+    <title>Free Image Hosting</title>
+    <meta
+      name="description"
+      content="A simple webpage to host images for free (Educational Project)"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico" />
+
+    <!-- Font - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
     <script type="module" src="scripts/main.ts"></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <img
+        id="preview"
+        class="no-pop"
+        src="assets/images/attach-image.svg"
+        alt="#"
+      />
+      <p id="uploadPrompt" class="upload-prompt">
+        Click anywhere on the page to select an image file
+      </p>
+      <div id="iBox" class="i-box hidden">
+        <p id="iBoxPrompt">Click to Upload</p>
+        <div
+          id="uploadingBox"
+          style="--u: 0%"
+          class="uploading-box"
+          data-prompt="Uploading..."
+        ></div>
+        <div id="outputBox" class="output-box hidden">
+          <p id="outputBoxPrompt">https://google.com/image</p>
+          <button id="copy">Copy</button>
+        </div>
+      </div>
+    </main>
+    <input
+      class="hidden"
+      id="file"
+      type="file"
+      accept="image/png, image/gif, image/jpeg"
+    />
+  </body>
 </html>

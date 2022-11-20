@@ -1,0 +1,109 @@
+/* Color Scheme */
+:root {
+  --p: #3369e7;
+  --v: 220;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+* {
+  /* outline: 1px solid red; */
+}
+
+/* -------------------------------- Main Box -------------------------------- */
+
+main {
+  width: 90vw;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+main > img {
+  box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
+    0 -6px 16px -6px #00000008;
+  border-radius: 0.7rem;
+  max-width: 100%;
+  max-height: 30vh;
+}
+
+main > p {
+  font-size: 1.3rem;
+  color: var(--p);
+  text-align: center;
+}
+
+/* interactive box */
+.i-box {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: hsl(var(--v), 100%, 40%);
+  background-color: hsl(var(--v), 100%, 94%);
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.i-box > .uploading-box {
+  height: 100%;
+  width: var(--u);
+  overflow: hidden;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  transition: width 150ms ease-out;
+}
+
+.i-box > .uploading-box::after {
+  content: attr(data-prompt);
+  width: 90vw;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--v), 100%, 40%);
+  color: hsl(var(--v), 100%, 97%);
+}
+
+.i-box > .output-box {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(var(--v), 100%, 94%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.7rem;
+}
+
+.i-box > .output-box > button {
+  height: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--v), 100%, 40%);
+  color: hsl(var(--v), 100%, 97%);
+}
